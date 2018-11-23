@@ -2,4 +2,6 @@
     <string name="app_name">DemoApp1</string>
     <string name="pista">Escribe algo!!!!</string>
     <string name="enviar">Enviar</string>
+    <string name="toast">Has escrito: </string>
+
 </resources>
