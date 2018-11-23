@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     public void recibirDatos(View view) {
         EditText et = findViewById(R.id.idText);
         String mensaje = et.getText().toString();
-        Toast.makeText(getApplicationContext(), getString(R.string.toast) .concat(mensaje), Toast.LENGTH_SHORT).show();
+        //SToast.makeText(getApplicationContext(), getString(R.string.toast) .concat(mensaje), Toast.LENGTH_SHORT).show();
 
         Intent i = new Intent(this, Main2Activity.class);
         i.putExtra("param1", mensaje);

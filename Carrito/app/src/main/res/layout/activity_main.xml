@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"  tools:context=".login">
+
+    <TextView
+        android:id="@+id/listaCategoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="13dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="0dp"
+        android:text="Crear categoria"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textView_username"
+        android:layout_width="109dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/listaCategoria"
+        android:layout_alignEnd="@+id/listaCategoria"
+        android:layout_alignRight="@+id/listaCategoria"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginRight="31dp"
+        android:text="Categoria"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/idCategoria2"
+        android:layout_alignTop="@+id/textView_username"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/botonCrearCat"
+        android:layout_width="293dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_password"
+        android:layout_alignStart="@+id/textView_password"
+        android:layout_alignLeft="@+id/textView_password"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="190dp"
+        android:onClick="crearCategoria"
+        android:text="Login" />
+</RelativeLayout>

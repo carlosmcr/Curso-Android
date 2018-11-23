@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"  tools:context=".login">
+
+    <TextView
+        android:id="@+id/listaCategoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="13dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="0dp"
+        android:text="Crear categoria"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textView_username"
+        android:layout_width="109dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/listaCategoria"
+        android:layout_alignEnd="@+id/listaCategoria"
+        android:layout_alignRight="@+id/listaCategoria"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginRight="31dp"
+        android:text="ID: "
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/idCategoria2"
+        android:layout_width="132dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/listaCategoria"
+        android:layout_alignEnd="@+id/listaCategoria"
+        android:layout_alignRight="@+id/listaCategoria"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="-170dp"
+        android:layout_marginRight="-170dp"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textView_username2"
+        android:layout_width="109dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/listaCategoria"
+        android:layout_alignEnd="@+id/listaCategoria"
+        android:layout_alignRight="@+id/listaCategoria"
+        android:layout_marginTop="130dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginRight="27dp"
+        android:text="Nombre: "
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/nombreCategoria2"
+        android:layout_width="131dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/listaCategoria"
+        android:layout_alignEnd="@+id/listaCategoria"
+        android:layout_alignRight="@+id/listaCategoria"
+        android:layout_marginTop="130dp"
+        android:layout_marginEnd="-169dp"
+        android:layout_marginRight="-169dp"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</RelativeLayout>
