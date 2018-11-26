@@ -8,28 +8,60 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
+import es.indra.carrito.models.Categoria;
+import es.indra.carrito.rest.RestService;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+import retrofit2.http.Body;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
     }
 
-    public void crearCategoria(View view) {
+    public void createCategoria(View view) {
 
-        Intent intent = new Intent(this, ListaCategorias.class);
         EditText et = findViewById(R.id.idCategoria2);
-        String mensaje = et.getText().toString();
-        //intent.putExtra("param1", mensaje);
+        String nombre = et.getText().toString();
 
 
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor edit = preferences.edit();
-        edit.putString("categoria", mensaje);
-        edit.commit();
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("http://192.168.1.60:8082")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+        RestService rest = retrofit.create(RestService.class);
+        Categoria categoria = new Categoria();
+        categoria.setNombre(nombre);
 
-        startActivity(intent);
+        Call retorno = rest.createCategoria(categoria);
+        retorno.enqueue(new Callback() {
+            @Override
+            public void onResponse(Call call, Response response) {
+                System.out.println("ok" + response.code());
+                Intent intent = new Intent(getApplicationContext(), ListadoActivity.class);
+                startActivity(intent);
+            }
 
+            @Override
+            public void onFailure(Call call, Throwable t) {
+                t.printStackTrace();
+            }
+        });
+
+
+
+
+    }
+
+    public void listaCategorias(View view){
+        Intent intent2 = new Intent(getApplicationContext(), ListadoActivity.class);
+        startActivity(intent2);
     }
 }

@@ -12,57 +12,82 @@
         android:layout_marginStart="13dp"
         android:layout_marginLeft="13dp"
         android:layout_marginTop="0dp"
-        android:text="Crear categoria"
+        android:text="Lista de categorias"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
-    <TextView
-        android:id="@+id/textView_username"
-        android:layout_width="109dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/listaCategoria"
-        android:layout_alignEnd="@+id/listaCategoria"
-        android:layout_alignRight="@+id/listaCategoria"
-        android:layout_marginTop="65dp"
-        android:layout_marginEnd="31dp"
-        android:layout_marginRight="31dp"
-        android:text="ID: "
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+    <TableLayout
+        android:layout_width="381dp"
+        android:layout_height="476dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="35dp">
 
-    <TextView
-        android:id="@+id/idCategoria2"
-        android:layout_width="132dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/listaCategoria"
-        android:layout_alignEnd="@+id/listaCategoria"
-        android:layout_alignRight="@+id/listaCategoria"
-        android:layout_marginTop="65dp"
-        android:layout_marginEnd="-170dp"
-        android:layout_marginRight="-170dp"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView_username2"
-        android:layout_width="109dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/listaCategoria"
-        android:layout_alignEnd="@+id/listaCategoria"
-        android:layout_alignRight="@+id/listaCategoria"
-        android:layout_marginTop="130dp"
-        android:layout_marginEnd="27dp"
-        android:layout_marginRight="27dp"
-        android:text="Nombre: "
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+            <TableRow
+                android:layout_width="90dp"
+                android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/nombreCategoria2"
-        android:layout_width="131dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/listaCategoria"
-        android:layout_alignEnd="@+id/listaCategoria"
-        android:layout_alignRight="@+id/listaCategoria"
-        android:layout_marginTop="130dp"
-        android:layout_marginEnd="-169dp"
-        android:layout_marginRight="-169dp"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+                <EditText
+                    android:id="@+id/editText"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="ID" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/editText2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Nombre" />
+            </TableRow>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableRow
+                android:layout_width="87dp"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/idCategoria2"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <EditText
+                    android:id="@+id/nombreCategoria2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+
+            </TableRow>
+
+        </TableRow>
+
+    </TableLayout>
 
 </RelativeLayout>
